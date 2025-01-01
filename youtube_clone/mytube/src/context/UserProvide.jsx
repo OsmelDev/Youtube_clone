@@ -38,7 +38,7 @@ export const UserProvider = ({ children }) => {
       if (cookie.token) {
         try {
           let res;
-          await fetch(`${url}/verify`, {
+          await fetch(`${url}/auth/verify`, {
             credentials: "include",
           })
             .then((data) => data.json())

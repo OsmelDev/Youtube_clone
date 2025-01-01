@@ -4,11 +4,11 @@ import { url } from "../../config";
 export const loginServices = async(dataUser) => {
  const response = await axios({
       method: "POST",
-      url: `${url}/login`,
+      url: `${url}/auth/login`,
       data: dataUser,
       withCredentials:true
  })
-  return response;
+  return response; 
 }
 
 export const registerService = async ({username, email, password, avatar}) => {
@@ -20,7 +20,7 @@ export const registerService = async ({username, email, password, avatar}) => {
 
   const response = await axios({
     method: "POST",
-    url: `${url}/register`,
+    url: `${url}/auth/register`,
     data: form,
     withCredentials:true
   })
@@ -28,7 +28,7 @@ export const registerService = async ({username, email, password, avatar}) => {
 }
 
 export const verifyService = async () => {
-  const response = await axios.get(`${url}/verify`,{withCredentials:true})
+  const response = await axios.get(`${url}/auth/verify`,{withCredentials:true})
   return response
 }
 
@@ -36,13 +36,13 @@ export const verifyService = async () => {
 export async function logoutService() {
   const response = await axios({
     method: "POST",
-    url: `${url}/logout`,
+    url: `${url}/auth/logout`,
     withCredentials: true 
   })
   return response
 }
   
 export async function updateService(user) {
-  const response = await axios.post(`${url}/update`,user,{withCredentials:true})
+  const response = await axios.post(`${url}/auth/update`,user,{withCredentials:true})
   return response;
 }

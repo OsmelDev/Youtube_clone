@@ -72,14 +72,16 @@ const Navbar = () => {
         )}
       </div>
       <div className={style.panel}>
-        <b id={style.darkmodebutton}>
-          {theme === "light" ? (
-            <FaSun color="black" />
-          ) : (
-            <FaMoon color="white" />
-          )}
-          {!isAuthenticated && <DarkModeButton setTheme={setTheme} />}
-        </b>
+        {!isAuthenticated && (
+          <b id={style.darkmodebutton}>
+            {theme === "light" ? (
+              <FaSun color="black" />
+            ) : (
+              <FaMoon color="white" />
+            )}
+            {!isAuthenticated && <DarkModeButton setTheme={setTheme} />}
+          </b>
+        )}
 
         {isAuthenticated ? (
           <UserPanel

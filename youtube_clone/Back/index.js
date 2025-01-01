@@ -12,14 +12,14 @@ const cors = require('cors')
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({ 
+  origin: "https://mytube-iota.vercel.app/",
   origin: "http://localhost:5174",
   origin: "http://localhost:5173",
-  origin: "https://mytube-iota.vercel.app/",
   credentials: true
 }))
 
-app.use("/auth", authRoutes)
 app.use('/',homeRoutes)
+app.use("/auth", authRoutes)
 app.use('/post', postRoutes)
 app.use('/public', express.static(`${__dirname}/storage/imgs`))
 app.use('/public/video', express.static(`${__dirname}/storage/videos`))
