@@ -8,7 +8,7 @@
   height: 100%;
 
   --bg-app: white;
-  --bg-components: aliceblue;
+  --bg-components: rgb(223, 223, 223);
   --font-text-color: black;
   --bg-buttons: aliceblue;
   --gradient-b: linear-gradient(
