@@ -8,17 +8,15 @@ import { useAuth } from "./context/UserProvide";
 
 function App() {
   const { open } = useAuth();
-
   useEffect(() => {
     const themeDefault = localStorage.getItem("theme");
     document.body.setAttribute("data-theme", themeDefault);
   }, []);
-
   return (
     <div className="app">
       <Layout />
       <MainContent />
-      {open ? <AuthWindow /> : ""}
+      {open && <AuthWindow />}
     </div>
   );
 }
