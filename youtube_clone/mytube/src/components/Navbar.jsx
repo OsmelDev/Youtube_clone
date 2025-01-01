@@ -3,17 +3,21 @@ import style from "./Navbar.module.css";
 import { ImYoutube } from "react-icons/im";
 import MenuIcon from "./components/MenuIcon";
 import { CiSearch } from "react-icons/ci";
-import { FaMicrophone } from "react-icons/fa";
+import { FaMicrophone, FaMoon, FaSun } from "react-icons/fa";
 import { useAuth } from "../context/UserProvide";
 import { Link } from "react-router-dom";
 import { UserPanel } from "./components/UserPanel";
 import { InitSeccion } from "./components/InitSeccion";
+import DarkModeButton from "./components/DarkModeButton";
 
 const Navbar = () => {
   const { logout } = useAuth();
   const [className, setClassName] = useState(true);
   const [active, setActive] = useState(false);
   const { isAuthenticated, setOpen, userData } = useAuth();
+  const [theme, setTheme] = useState(() =>
+    document.body.getAttribute("data-theme")
+  );
 
   function micro() {
     navigator.mediaDevices
@@ -63,18 +67,28 @@ const Navbar = () => {
           </button>
         )}
       </div>
+      <div className={style.panel}>
+        <b id={style.darkmodebutton}>
+          {theme === "light" ? (
+            <FaSun color="black" />
+          ) : (
+            <FaMoon color="white" />
+          )}
+          {!isAuthenticated && <DarkModeButton setTheme={setTheme} />}
+        </b>
 
-      {isAuthenticated ? (
-        <UserPanel
-          userData={userData}
-          className={className}
-          setClassName={setClassName}
-          logout={logout}
-          style={style}
-        />
-      ) : (
-        <InitSeccion style={style} setOpen={setOpen} />
-      )}
+        {isAuthenticated ? (
+          <UserPanel
+            userData={userData}
+            className={className}
+            setClassName={setClassName}
+            logout={logout}
+            style={style}
+          />
+        ) : (
+          <InitSeccion style={style} setOpen={setOpen} />
+        )}
+      </div>
     </div>
   );
 };
