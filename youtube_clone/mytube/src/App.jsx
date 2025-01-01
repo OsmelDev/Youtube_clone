@@ -9,8 +9,11 @@ import { useAuth } from "./context/UserProvide";
 function App() {
   const { open } = useAuth();
   useEffect(() => {
-    const themeDefault = localStorage.getItem("theme");
-    document.body.setAttribute("data-theme", themeDefault);
+    function changeTheme() {
+      const themeDefault = localStorage.getItem("theme");
+      document.body.setAttribute("data-theme", themeDefault);
+    }
+    changeTheme();
   }, []);
   return (
     <div className="app">
