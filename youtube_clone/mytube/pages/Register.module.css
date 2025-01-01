@@ -1,0 +1,310 @@
+.registerContainer {
+  width: 50%;
+  height: 55%;
+  display: flex;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+
+  .logoContainer {
+    color: aliceblue;
+    border: 1px solid rgb(56, 55, 55);
+    border-radius: 0 20px 20px 0;
+    width: 50%;
+    height: 100%;
+    padding: 20px 40px;
+    background-color: #646161;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transform: translate(0);
+    transition: all 1s ease-in-out;
+    svg {
+      height: 40%;
+      width: 40%;
+      color: red;
+    }
+    p {
+      position: absolute;
+      top: 28%;
+      font-size: 35px;
+    }
+    span {
+      position: absolute;
+      font-size: 50px;
+      top: 45%;
+    }
+  }
+
+  .formRegister {
+    border: 1px solid rgb(56, 55, 55);
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    width: 50%;
+    height: 100%;
+    padding: 20px 40px;
+    justify-content: center;
+    background-color: #121212;
+    align-content: center;
+    align-items: center;
+    opacity: 1;
+    transform: translate(0);
+    transition: all 1s ease-in-out;
+
+    label {
+      text-align: center;
+    }
+    .message {
+      padding: 0;
+
+      font-size: small;
+      color: #09ff09;
+    }
+    .errorMessage {
+      padding: 0;
+      font-size: small;
+      color: #f50505;
+      text-align: center;
+    }
+    input {
+      width: 60%;
+      align-items: center;
+      align-content: center;
+      outline: none;
+      height: 12px;
+      padding: 5px;
+    }
+    p {
+      text-align: end;
+      font-size: 15px;
+      a {
+        color: blue;
+        cursor: pointer;
+      }
+    }
+    span {
+      display: block;
+      font-size: 12px;
+      color: red;
+      text-align: start;
+      width: 60%;
+      margin-bottom: 5px;
+    }
+    .inputFile {
+      width: 90%;
+      padding: 10px;
+    }
+    .fileSelect {
+      position: relative;
+      display: inline-block;
+    }
+    .fileSelect::before {
+      background-color: #121212;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 3px;
+      content: "Avatar";
+      display: flex;
+      height: 20px;
+      bottom: 0;
+      position: absolute;
+      width: 80px;
+      border: 1px solid gray;
+    }
+    .fileSelect input[type="file"] {
+      opacity: 0;
+      width: 50px;
+      height: 10px;
+      display: inline-block;
+    }
+    #file::before {
+      border: 1px solid red;
+      position: absolute;
+      top: 13px;
+      right: 0;
+      left: 0;
+    }
+  }
+}
+
+.btnClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #121212a6;
+  outline: none;
+  border: 1px solid gray;
+  color: beige;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+
+h1 {
+  color: aliceblue;
+  position: static;
+}
+
+.linksContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+}
+.btnRegister {
+  width: 25%;
+  height: 50%;
+  padding: 5px;
+  background-color: transparent;
+  color: aliceblue;
+  border-radius: 5px;
+  border: 1px solid #636060;
+}
+.btnRegister:hover {
+  cursor: pointer;
+  background-color: #636060;
+}
+
+.showRegisterContainer {
+  width: 50%;
+  height: 55%;
+  display: absolute;
+  opacity: 0;
+  z-index: -9;
+  transition: all 0.5s ease-in-out;
+  .logoContainer {
+    color: aliceblue;
+    border: 1px solid rgb(56, 55, 55);
+    border-radius: 0 20px 20px 0;
+    width: 50%;
+    height: 100%;
+    padding: 20px 40px;
+    background-color: #646161;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translate(-100%);
+    transition: all 1s ease-in-out;
+    svg {
+      height: 40%;
+      width: 40%;
+      color: red;
+    }
+    p {
+      position: absolute;
+      top: 28%;
+      font-size: 35px;
+    }
+    span {
+      position: absolute;
+      font-size: 50px;
+      top: 45%;
+    }
+  }
+
+  .formRegister {
+    border: 1px solid rgb(56, 55, 55);
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    width: 50%;
+    height: 100%;
+    padding: 20px 40px;
+    justify-content: center;
+    background-color: #121212;
+    align-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translate(100%);
+    transition: all 1s ease-in-out;
+
+    label {
+      text-align: center;
+    }
+    .message {
+      padding: 0;
+
+      font-size: small;
+      color: #09ff09;
+    }
+    .errorMessage {
+      padding: 0;
+      font-size: small;
+      color: #f50505;
+      text-align: center;
+    }
+    input {
+      width: 60%;
+      align-items: center;
+      align-content: center;
+      outline: none;
+      height: 15px;
+      padding: 5px;
+    }
+    p {
+      text-align: end;
+      font-size: 15px;
+
+      a {
+        color: blue;
+        cursor: pointer;
+      }
+    }
+    span {
+      display: block;
+      font-size: 12px;
+      color: red;
+      text-align: start;
+      width: 60%;
+      margin-bottom: 5px;
+    }
+    .inputFile {
+      width: 90%;
+      padding: 10px;
+    }
+    .fileSelect {
+      position: relative;
+      display: inline-block;
+    }
+    .fileSelect::before {
+      background-color: #121212;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 3px;
+      content: "Avatar";
+      display: flex;
+      height: 20px;
+      bottom: 0;
+      position: absolute;
+      width: 80px;
+      border: 1px solid gray;
+    }
+    .fileSelect input[type="file"] {
+      opacity: 0;
+      width: 50px;
+      height: 10px;
+      display: inline-block;
+    }
+    #file::before {
+      border: 1px solid red;
+      position: absolute;
+      top: 13px;
+      right: 0;
+      left: 0;
+    }
+  }
+}

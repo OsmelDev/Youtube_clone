@@ -1,0 +1,151 @@
+.sidebar {
+  width: 6%;
+  height: 35.3rem;
+  position: absolute;
+  top: 60px;
+  background-color: var(--bg-components);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease-in-out;
+  overflow-y: overlay;
+  scrollbar-width: none;
+
+  .sidebar_categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #8080804a;
+    width: 85%;
+    gap: 0.5rem;
+    color: var(--font-text-color);
+    transition: all 0.3s ease-in-out;
+
+    a {
+      color: var(--font-text-color);
+      text-decoration: none;
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 2rem;
+    }
+
+    .sidebar_userCategory,
+    .sidebar_yourCategory,
+    .sidebar_channelsCategory,
+    .sidebar_youtubeCategory,
+    .sidebar_optionsCategory {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      color: var(--font-text-color);
+      height: 45px;
+      width: 100%;
+      font-size: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+
+      span {
+        text-align: center;
+        opacity: 1;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+      }
+      svg {
+        height: 1.5rem;
+        width: 2rem;
+      }
+    }
+  }
+}
+
+.sidebarShow {
+  width: 13.5%;
+  height: 35.3rem;
+  position: absolute;
+  top: 60px;
+  background-color: var(--bg-components);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-color);
+  transition: all 0.3s ease-in-out;
+
+  .sidebar_categories {
+    width: 85%;
+    border-bottom: 1px solid #8080804a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--font-text-color);
+    transition: all 0.3s ease-in-out;
+
+    .sidebar_userCategory,
+    .sidebar_yourCategory,
+    .sidebar_channelsCategory,
+    .sidebar_youtubeCategory,
+    .sidebar_optionsCategory {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      color: var(--font-text-color);
+      height: 45px;
+      width: 100%;
+      font-size: 12px;
+      text-decoration: none;
+      gap: 1rem;
+      transition: all 0.3s ease-in-out;
+
+      svg {
+        height: 1.5rem;
+        width: 2rem;
+      }
+      span {
+        transition: all 0.3s ease-in-out;
+        width: 50%;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.sidebar_optionsCategory {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.head_text {
+  color: var(--font-text-color);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+.sidebar_categories > *:hover {
+  background-color: #71717144;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar_bottom_info {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 12px;
+  padding: 10px 0;
+  color: var(--font-text-color);
+  a {
+    text-decoration: none;
+    color: var(--font-text-color);
+  }
+}

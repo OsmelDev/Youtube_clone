@@ -1,0 +1,21 @@
+.menu {
+  margin-left: 10px;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 100%;
+  background: var(--bg-buttons);
+}
+.menu div {
+  width: 100%;
+  height: 1px;
+  background-color: var(--font-text-color);
+}
+.menu:hover {
+  background-color: var(--hover);
+}

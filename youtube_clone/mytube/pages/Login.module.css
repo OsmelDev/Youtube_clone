@@ -1,0 +1,222 @@
+.loginContainer {
+  display: flex;
+  width: 50%;
+  height: 55%;
+  position: absolute;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+
+  .logoContainer {
+    color: aliceblue;
+    border: 1px solid rgb(56, 55, 55);
+    width: 50%;
+    height: 100%;
+    padding: 20px 40px;
+    border-radius: 20px 0 0 20px;
+    background-color: #646161;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transform: translate(0);
+    transition: all 1s ease-in-out;
+    svg {
+      height: 40%;
+      width: 40%;
+      color: red;
+    }
+    p {
+      position: absolute;
+      top: 28%;
+      font-size: 35px;
+    }
+    span {
+      position: absolute;
+      font-size: 50px;
+      top: 45%;
+    }
+  }
+
+  .formLogin {
+    border: 1px solid rgb(56, 55, 55);
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    width: 50%;
+    height: 100%;
+    padding: 20px 40px;
+    justify-content: center;
+    gap: 10px;
+    background-color: #121212;
+    border-radius: 0 20px 20px 0;
+    align-content: center;
+    align-items: center;
+    opacity: 1;
+    transform: translate(0);
+    transition: all 1s ease-in-out;
+
+    label {
+      text-align: center;
+    }
+    .message {
+      text-align: center;
+      padding: 0;
+      font-size: small;
+      color: #09ff09;
+      justify-content: center;
+    }
+    .errorMessage {
+      padding: 0;
+      font-size: small;
+      color: #f50505;
+      text-align: center;
+    }
+    input {
+      width: 60%;
+      align-items: center;
+      align-content: center;
+      outline: none;
+      height: 15px;
+      padding: 5px;
+    }
+    p {
+      text-align: end;
+      font-size: 15px;
+      display: flex;
+      gap: 5px;
+      width: 100%;
+      justify-content: end;
+
+      a {
+        color: blue;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+h1 {
+  color: aliceblue;
+  position: static;
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  margin-top: 10px;
+}
+.btnLogin {
+  width: 20%;
+  height: 50%;
+  padding: 5px;
+  background-color: transparent;
+  color: aliceblue;
+  border-radius: 5px;
+  border: 1px solid #636060;
+}
+.btnLogin:hover {
+  cursor: pointer;
+  background-color: #636060;
+}
+
+.showLoginContainer {
+  width: 50%;
+  height: 55%;
+  display: flex;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  .logoContainer {
+    color: aliceblue;
+    border: 1px solid rgb(56, 55, 55);
+    width: 50%;
+    height: 100%;
+    padding: 20px 40px;
+    border-radius: 20px 0 0 20px;
+    background-color: #646161;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transform: translate(100%);
+    transition: all 1s ease-in-out;
+    svg {
+      height: 40%;
+      width: 40%;
+      color: red;
+    }
+    p {
+      position: absolute;
+      top: 28%;
+      font-size: 35px;
+    }
+    span {
+      position: absolute;
+      font-size: 50px;
+      top: 45%;
+    }
+  }
+
+  .formLogin {
+    border: 1px solid rgb(56, 55, 55);
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    width: 50%;
+    height: 100%;
+    padding: 20px 40px;
+    justify-content: center;
+    gap: 10px;
+    background-color: #121212;
+    border-radius: 0 20px 20px 0;
+    align-content: center;
+    align-items: center;
+    opacity: 1;
+    transform: translate(-100%);
+    transition: all 1s ease-in-out;
+
+    label {
+      text-align: center;
+    }
+    .message {
+      padding: 0;
+
+      font-size: small;
+      color: #09ff09;
+    }
+    .errorMessage {
+      padding: 0;
+      font-size: small;
+      color: #f50505;
+      text-align: center;
+    }
+    input {
+      width: 60%;
+      align-items: center;
+      align-content: center;
+      outline: none;
+      height: 15px;
+      padding: 5px;
+    }
+    p {
+      text-align: end;
+      font-size: 15px;
+      display: flex;
+      gap: 5px;
+      width: 100%;
+      justify-content: end;
+      a {
+        color: blue;
+        cursor: pointer;
+      }
+    }
+  }
+}

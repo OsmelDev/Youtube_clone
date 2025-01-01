@@ -1,0 +1,28 @@
+.userMenu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  min-height: 100px;
+  height: 100px;
+}
+.menuButtons {
+  min-width: 60%;
+  height: 30px;
+  display: flex;
+  gap: 20px;
+
+  button {
+    color: var(--font-text-color);
+    border: 1px solid #71717144;
+    border-radius: 5px;
+    background-color: var(--bg-buttons);
+    padding: 5px 10px;
+  }
+  button:hover {
+    color: aliceblue;
+    background-color: #717171;
+    border: 1px solid #f0f8ff8f;
+    cursor: pointer;
+  }
+}

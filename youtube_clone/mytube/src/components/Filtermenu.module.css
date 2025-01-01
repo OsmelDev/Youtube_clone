@@ -1,0 +1,84 @@
+.menuContiner {
+  position: fixed;
+  width: 93.3%;
+  display: flex;
+  flex-wrap: nowrap;
+  top: 60px;
+  right: 0;
+  max-width: 80rem;
+  height: 50px;
+  background-color: var(--bg-components);
+  color: var(--font-text-color);
+  padding-right: 10px;
+  z-index: 9;
+  transition: all 0.3s ease-in-out;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+.menuContainerOpen {
+  position: fixed;
+  width: 86.5%;
+  display: flex;
+  flex-wrap: nowrap;
+  top: 60px;
+  right: 0;
+  max-width: 80rem;
+  height: 50px;
+  background-color: var(--bg-components);
+  color: var(--font-text-color);
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  z-index: 9;
+  transition: all 0.5s ease-in-out;
+}
+.buttonFilters {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  gap: 0.5rem;
+  align-items: center;
+  scroll-behavior: smooth;
+  button {
+    flex: 0 0 auto;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: var(--bg-buttons);
+    border: 1px solid gray;
+    color: var(--font-text-color);
+    cursor: pointer;
+  }
+  .btnFilts:active {
+    color: blanchedalmond;
+  }
+}
+.buttonFilters::-webkit-scrollbar {
+  display: none;
+}
+.menuContiner::-webkit-scrollbar {
+  display: none;
+}
+
+.arrowBack {
+  position: absolute;
+  background: var(--gradient-b);
+  cursor: pointer;
+  height: 50px;
+  width: 30px;
+}
+.arrowBackHiden {
+  display: none;
+}
+.arrowFoward {
+  position: absolute;
+  right: 0px;
+  background: var(--gradient-f);
+  cursor: pointer;
+  height: 50px;
+  width: 30px;
+}
+.arrowFowardHiden {
+  display: none;
+}

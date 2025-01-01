@@ -1,0 +1,48 @@
+:root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  scrollbar-color: #636060 transparent;
+  scrollbar-width: none;
+  scrollbar-gutter: stable;
+  height: 100%;
+
+  --bg-app: white;
+  --bg-components: aliceblue;
+  --font-text-color: black;
+  --bg-buttons: aliceblue;
+  --gradient-b: linear-gradient(
+    to right,
+    rgb(255, 252, 252),
+    85%,
+    rgb(0 0 0 / 0%)
+  );
+  --gradient-f: linear-gradient(
+    to left,
+    rgba(247, 247, 247, 0.925),
+    85%,
+    rgb(0 0 0 / 0%)
+  );
+  --hover: #717171;
+  --scrollbar-color: #bab4b4 #0000ff00;
+}
+
+body {
+  max-width: 100vw;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-components);
+}
+[data-theme="dark"] {
+  --bg-app: #17171c;
+
+  --bg-components: rgb(8, 8, 8);
+  --font-text-color: aliceblue;
+  --bg-buttons: black;
+  --gradient-b: linear-gradient(to right, rgb(0, 0, 0), 85%, rgb(0 0 0 / 0%));
+  --gradient-f: linear-gradient(to left, rgb(0, 0, 0), 85%, rgb(0 0 0 / 0%));
+  --hover: rgba(236, 228, 228, 0.123);
+  --scrollbar-color: #242424 transparent;
+}
