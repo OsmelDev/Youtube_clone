@@ -15,9 +15,13 @@ const Navbar = () => {
   const [className, setClassName] = useState(true);
   const [active, setActive] = useState(false);
   const { isAuthenticated, setOpen, userData } = useAuth();
-  const [theme, setTheme] = useState(() =>
-    document.body.getAttribute("data-theme")
-  );
+  const [theme, setTheme] = useState(() => {
+    if (!document.body.getAttribute("data-theme")) {
+      return "light";
+    } else {
+      return document.body.getAttribute("data-theme");
+    }
+  });
 
   function micro() {
     navigator.mediaDevices
