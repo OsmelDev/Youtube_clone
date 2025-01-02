@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const {HOST, PORT} = require('../config.env')
+const {HOST, PORT} = require('../config.js')
 
 
 const postSchema = new mongoose.Schema(

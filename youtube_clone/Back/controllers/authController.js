@@ -1,7 +1,7 @@
 const User = require("../Models/User");
 const createAccessToken = require("../libs/jwt");
 const bcrypt = require("bcrypt");
-const { SALT_ROUNDS, SECRET_KEY } = require("../config.env");
+const { SALT_ROUNDS, SECRET_KEY } = require("../config.js");
 const jwt = require("jsonwebtoken");
 const Post = require("../Models/Post");
 

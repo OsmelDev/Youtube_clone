@@ -1,5 +1,5 @@
 const JWT = require('jsonwebtoken')
-const { SECRET_KEY } = require('../config.env')
+const { SECRET_KEY } = require('../config.js')
 
 const authRequired = (req, res, next) => {
   const { token } = req.cookies

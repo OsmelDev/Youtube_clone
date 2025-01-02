@@ -1,5 +1,5 @@
 const express = require('express')
-const {PORT} = require('./config.env')
+const {PORT} = require('./config.js')
 const connectDB = require("./database/connectDB.js")
 const cookieParser = require('cookie-parser')
 const app = express()
@@ -7,8 +7,7 @@ const authRoutes = require('./routes/auth.routes.js')
 const homeRoutes = require('./routes/home.route.js')
 const postRoutes = require('./routes/post.routes.js')
 const cors = require('cors')
-
-
+  
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({ 

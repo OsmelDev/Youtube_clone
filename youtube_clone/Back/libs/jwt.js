@@ -1,5 +1,5 @@
 const JWT = require('jsonwebtoken')
-const { SECRET_KEY } = require("../config.env")
+const { SECRET_KEY } = require("../config.js")
 
 module.exports = function createAccessToken(payload) {
   return new Promise((resolve, reject) => {

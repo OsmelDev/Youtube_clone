@@ -1,7 +1,7 @@
 const Post = require("../Models/Post");
 const User = require("../Models/User");
 const jwt = require("jsonwebtoken");
-const { SECRET_KEY } = require("../config.env");
+const { SECRET_KEY } = require("../config.js");
 const fs = require('node:fs')
 
 const postVideo = async (req, res) => {

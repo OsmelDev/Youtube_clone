@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
-const {HOST} = require("../config.env")
-const { PORT } = require("../config.env")
+const {HOST} = require("../config.js")
+const { PORT } = require("../config.js")
 
 
 const userSchema = new mongoose.Schema(
