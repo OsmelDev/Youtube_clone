@@ -16,7 +16,7 @@ const Edit = () => {
   const onSubmit = handleSubmit(async (user) => {
     try {
       const response = await updateService(user);
-      console.log(response.data);
+      setMessage(response.data);
       setReload(!reload);
     } catch (error) {
       setError(error.response.data);
@@ -26,8 +26,8 @@ const Edit = () => {
   return (
     <div className={style.container}>
       <form action="" onSubmit={onSubmit} className={style.updateForm}>
-        {/* {message && <p id={style.message}>{message}</p>}
-        {error && <b id={style.error}>{error}</b>} */}
+        {message && <p id={style.message}>{message}</p>}
+        {error && <b id={style.error}>{error}</b>}
         <label htmlFor=""> Name</label>
         <input
           type="text"
