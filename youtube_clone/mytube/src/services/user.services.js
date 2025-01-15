@@ -43,6 +43,11 @@ export async function logoutService() {
 }
   
 export async function updateService(user) {
-  const response = await axios.post(`${url}/auth/update`,user,{withCredentials:true})
+  const response = await axios({
+      method: "POST",
+      url: `${url}/auth/update`,
+      data: user,
+      withCredentials:true
+ })
   return response;
 }
